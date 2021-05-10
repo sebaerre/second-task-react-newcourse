@@ -6,11 +6,10 @@ import Card from '../UI/Card';
 
 const Expenses = (props) => {
 
-  const [dateFilter, setDateFilter] = useState();
+  const [dateFilter, setDateFilter] = useState('2019');
 
   const setDateFilterHandler = (event) => {
     setDateFilter(event.target.value);
-    console.log(event.target.value);
   }
 
   return (
