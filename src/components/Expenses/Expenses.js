@@ -6,7 +6,7 @@ import Card from '../UI/Card';
 
 const Expenses = (props) => {
 
-  const [dateFilter, setDateFilter] = useState('2019');
+  const [dateFilter, setDateFilter] = useState('2020');
 
   const setDateFilterHandler = (event) => {
     setDateFilter(event.target.value);
@@ -14,7 +14,7 @@ const Expenses = (props) => {
 
   return (
     <div>
-      <ExpensesFilter onDateChange={setDateFilterHandler} />
+      <ExpensesFilter selected={dateFilter} onDateChange={setDateFilterHandler} />
       <Card className="expenses">
         <ExpenseItem
           title={props.expenses[0].title}
